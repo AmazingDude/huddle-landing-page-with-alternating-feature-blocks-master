@@ -1,0 +1,34 @@
+.btn{
+    padding: 1rem 4rem;
+    border: none;
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 700;
+    
+    
+    border-radius: 2rem;
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    &--primary{
+        background: #fff;
+        color: $VeryDarkCyan;
+        transition: 0.2s ease-in;
+        &:hover{
+            box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.315);
+            transform: scale(1.1);
+            color: $GrayishBlue;
+            transition: 0.2s ease-out;
+        }
+    }
+    &--secondary{
+        background: $Pink;
+        color: #fff;
+        padding: 1.2rem 4rem;
+        transition: 0.2s ease-in;
+        &:hover{
+            transform: scale(1.05);
+            background: #ff0fa6;
+            transition: 0.2s ease-out;
+        }
+    }
+}

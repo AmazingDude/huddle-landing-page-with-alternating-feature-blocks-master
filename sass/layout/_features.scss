@@ -1,0 +1,56 @@
+.features{
+    @include flex(column, center, space-between);
+    padding-top: 9rem;
+    margin-top: 3rem;
+    padding-bottom: 18rem;
+    background-color: #fff !important;
+
+   .feature{
+        @include flex(row, center, space-around);
+        gap: 8rem;
+        padding: 5rem 7rem;
+        margin: 0 3rem;
+        &__text{
+
+
+            h3{
+                font-family: $font-headings;
+                font-size: 1.7rem;
+                color: $VeryDarkCyan;
+            }
+
+            p{
+                font-family: $font-body;
+                font-size: 18px;
+                color: $GrayishBlue;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .features{
+        padding-bottom: 28rem;
+        .feature{
+            &:nth-child(odd){
+                @include flex(column-reverse, center, space-around);
+                padding: 5rem 6rem;
+            }
+            &:nth-child(even){
+                @include flex(column, center, space-around);
+                padding: 5rem 6rem;
+            }
+            &__text{
+                h3{
+                    font-size: 2.5rem;
+                    text-align: center;
+                }
+                p{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

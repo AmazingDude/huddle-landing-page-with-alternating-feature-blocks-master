@@ -1,0 +1,17 @@
+.attribution{ 
+        position: relative;
+        margin: 3rem;
+        bottom: 0rem;
+        font-size: 11px;
+        font-family: $font-headings;
+        text-align: center; 
+        a{
+        color: $Pink; 
+        }
+    }
+
+@media screen and (max-width: $screen-md) {
+    .attribution{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,17 @@
+
+$Pink: hsl(322, 100%, 66%);
+
+$VeryPaleCyan: hsl(193, 100%, 96%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$GrayishBlue: hsl(208, 11%, 55%);
+
+$screen-sm: 576px; // Large smartphones
+$screen-md: 768px; // Small tablets
+$screen-lg: 992px; // Tablets
+$screen-xl: 1200px; // Desktops
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$font-headings: 'Poppins';
+$font-body: 'Open Sans';
