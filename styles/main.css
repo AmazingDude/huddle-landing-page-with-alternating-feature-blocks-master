@@ -10,16 +10,17 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: url("/images/bg-hero-desktop.svg") hsl(193, 100%, 96%);
   background-size: contain;
   background-repeat: no-repeat;
   overflow-x: hidden;
-  width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    background: url("/images/bg-hero-mobile.svg") hsl(193, 100%, 96%);
+  }
+}
 .btn {
   padding: 1rem 4rem;
   border: none;
@@ -56,6 +57,8 @@ body {
 .attribution {
   position: relative;
   margin: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
   bottom: 0rem;
   font-size: 11px;
   font-family: "Poppins";
@@ -68,6 +71,14 @@ body {
 @media screen and (max-width: 768px) {
   .attribution {
     font-size: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .attribution {
+    font-size: 0.8rem;
+    margin: 0;
   }
 }
 header {
@@ -91,6 +102,17 @@ header img {
   header .btn {
     font-size: 1.2rem;
     padding: 0.8rem 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  header {
+    padding: 1rem 1rem;
+  }
+  header img {
+    height: 1.4rem;
+  }
+  header .btn {
+    font-size: 0.8rem;
   }
 }
 .hero {
@@ -149,6 +171,27 @@ header img {
     margin-top: 5rem;
   }
 }
+@media screen and (max-width: 576px) {
+  .hero {
+    margin-top: 4rem;
+    padding: 0 2rem;
+  }
+  .hero .hero__text h2 {
+    font-size: 2rem !important;
+  }
+  .hero .hero__text p {
+    font-size: 1.3rem;
+  }
+  .hero .hero__text .btn {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    width: 95%;
+  }
+  .hero .hero__img {
+    margin-top: 4rem;
+  }
+}
 .features {
   display: flex;
   flex-direction: column;
@@ -205,6 +248,35 @@ header img {
   .features .feature__text p {
     font-size: 1.5rem;
     text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .features {
+    margin-top: 0;
+    padding: 0;
+    padding-bottom: 13rem;
+  }
+  .features .feature:nth-child(odd) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+    margin: 0;
+  }
+  .features .feature:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+    margin: 0;
+  }
+  .features .feature__text h3 {
+    font-size: 2rem;
+  }
+  .features .feature__text p {
+    font-size: 1.2rem;
   }
 }
 footer {
@@ -387,19 +459,20 @@ footer .info .socials p {
   footer {
     padding: 12rem 2rem;
     padding-bottom: 0;
-    width: 100%;
   }
   footer .bottom__container {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
+    margin: 2rem;
     border-radius: 2rem;
   }
   footer .bottom__container h3 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     text-align: center;
   }
   footer .bottom__container .btn {
-    padding: 1.6rem 6rem;
+    padding: 1.6rem 2rem;
     font-size: 1.25rem;
+    width: 90%;
   }
   footer .info {
     display: flex;
@@ -424,8 +497,8 @@ footer .info .socials p {
     background-size: 1.5rem;
     background-repeat: no-repeat;
     height: 3rem;
-    width: 11rem;
-    margin-right: 0;
+    width: 4rem;
+    padding: 0.5rem;
   }
   footer .info .contact__phone {
     font-size: 1.7rem;
@@ -477,5 +550,73 @@ footer .info .socials p {
   }
   footer .info .socials p {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer .bottom__container {
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  footer .bottom__container h3 {
+    font-size: 1.5rem;
+  }
+  footer .bottom__container .btn {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  footer .info {
+    margin-top: 0;
+    gap: 3rem;
+  }
+  footer .info .contact img {
+    width: 16rem;
+  }
+  footer .info .contact__location {
+    font-size: 1rem;
+  }
+  footer .info .contact__location::before {
+    background-size: 1rem;
+    width: 1.4rem;
+    height: 1rem;
+    margin-right: 1.2rem;
+  }
+  footer .info .contact__phone {
+    font-size: 1rem;
+  }
+  footer .info .contact__phone::before {
+    background-size: 1.2rem;
+    width: 1.4rem;
+    height: 1.5rem;
+  }
+  footer .info .contact__email {
+    font-size: 1rem;
+  }
+  footer .info .contact__email::before {
+    background-size: 1.2rem;
+    width: 1.4rem;
+    height: 1.5rem;
+  }
+  footer .info .links {
+    justify-content: space-around;
+    height: 15rem;
+    gap: 0rem;
+  }
+  footer .info .links a {
+    font-size: 1.2rem;
+  }
+  footer .info .socials__info {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  footer .info .socials__info a {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: solid white 1px;
+  }
+  footer .info .socials__info a img {
+    height: 1rem;
+  }
+  footer .info .socials p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

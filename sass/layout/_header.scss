@@ -21,3 +21,15 @@ header{
         }
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    header{
+        padding: 1rem 1rem;
+        img{
+            height: 1.4rem;
+        }
+        .btn{
+            font-size: 0.8rem;
+        }
+    }
+}

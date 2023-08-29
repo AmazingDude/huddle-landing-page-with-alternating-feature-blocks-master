@@ -54,3 +54,31 @@
         }
     }
 }
+
+@media screen and (max-width: $screen-sm) {
+    .features{
+        margin-top: 0;
+        padding: 0;
+        padding-bottom: 13rem;
+        .feature{
+            &:nth-child(odd){
+                @include flex(column-reverse, center, space-around);
+                padding: 2rem 3rem;
+                margin: 0;
+            }
+            &:nth-child(even){
+                @include flex(column, center, space-around);
+                padding: 2rem 3rem;
+                margin: 0;
+            }
+            &__text{
+                h3{
+                    font-size: 2rem
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

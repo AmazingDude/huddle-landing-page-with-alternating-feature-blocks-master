@@ -1,6 +1,8 @@
 .attribution{ 
         position: relative;
         margin: 3rem;
+        margin-bottom: 0;
+        padding-bottom: 2rem;
         bottom: 0rem;
         font-size: 11px;
         font-family: $font-headings;
@@ -13,5 +15,13 @@
 @media screen and (max-width: $screen-md) {
     .attribution{
         font-size: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+}
+@media screen and (max-width: $screen-sm) {
+    .attribution{
+        font-size: 0.8rem;
+        margin: 0;
     }
 }
